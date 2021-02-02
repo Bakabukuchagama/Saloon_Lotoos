@@ -19,12 +19,16 @@
             android:layout_height="match_parent"
             android:layout_marginTop="10dp"
             android:background="@color/grey"
+            android:minHeight="20dp"
             android:orientation="vertical">
 
             <WebView
                 android:id="@+id/webView"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent" />
+                android:layout_height="100dp">
+
+            </WebView>
+
         </LinearLayout>
     </ScrollView>
 </androidx.constraintlayout.widget.ConstraintLayout>

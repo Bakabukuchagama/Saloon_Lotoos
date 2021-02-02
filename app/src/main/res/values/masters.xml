@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="masters">
+        <item>Володя Карась</item>
+        <item>Арни Рама</item>
+        <item>Антон Гук</item>
+        <item>Вася Гвоздь</item>
+        <item>Master5</item>
+    </string-array>
+</resources>

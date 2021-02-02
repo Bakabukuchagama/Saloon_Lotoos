@@ -6,28 +6,30 @@
     <group android:checkableBehavior="single">
         <item
             android:id="@+id/nav_home"
-            android:icon="@drawable/ic_menu_camera"
+            android:icon="@drawable/ic_baseline_home_24"
             android:title="@string/menu_home" />
         <item
             android:id="@+id/nav_gallery"
             android:icon="@drawable/ic_menu_gallery"
-            android:title="@string/menu_gallery" />
+            android:title="@string/menu_masters" />
         <item
             android:id="@+id/nav_slideshow"
-            android:icon="@drawable/ic_menu_slideshow"
-            android:title="@string/menu_slideshow" />
+            android:icon="@drawable/ic_baseline_insert_invitation_24"
+            android:title="@string/menu_request" />
         <item
             android:id="@+id/phone"
             android:icon="@drawable/ic_baseline_phone_in_talk_24"
-            android:title="phone"/>
+            android:title="@string/menu_phone" />
     </group>
 <group android:checkableBehavior="none">
-    <item android:title="Обратная связь">
+    <item
+        android:id="@+id/nav_feedback"
+        android:title="@string/menu_feedback">
         <menu>
-<!--            <item-->
-<!--                android:id="@+id/phone"-->
-<!--                android:icon="@drawable/ic_baseline_phone_in_talk_24"-->
-<!--                android:title="phone"/>-->
+            <!--            <item-->
+            <!--                android:id="@+id/phone"-->
+            <!--                android:icon="@drawable/ic_baseline_phone_in_talk_24"-->
+            <!--                android:title="phone"/>-->
 
         </menu>
     </item>

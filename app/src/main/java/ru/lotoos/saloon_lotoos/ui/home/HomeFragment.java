@@ -30,7 +30,7 @@ public class HomeFragment extends Fragment {
         WebSettings webSettings = myWebView.getSettings();
         webSettings.setJavaScriptEnabled(true);
         myWebView.setWebViewClient(new WebViewClient());
-        myWebView.loadUrl("https://www.google.com");
+        myWebView.loadUrl("http://www.lotoos.ru/");
 
         return root;
     }
