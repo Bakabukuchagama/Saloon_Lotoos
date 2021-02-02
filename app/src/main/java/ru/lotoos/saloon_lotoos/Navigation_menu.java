@@ -81,6 +81,7 @@ public class Navigation_menu extends AppCompatActivity implements NavigationView
         // Выводим выбранный пункт в заголовке
         setTitle(item.getTitle());
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
+        //скрывает меню
         drawer.closeDrawer(GravityCompat.START);
 
 
