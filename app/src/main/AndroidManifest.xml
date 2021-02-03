@@ -3,6 +3,8 @@
     package="ru.lotoos.saloon_lotoos" >
 
     <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NOTIFICATION_POLICY" />
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
     <application
         android:usesCleartextTraffic="true"
         android:allowBackup="true"
@@ -24,6 +26,9 @@
         <activity android:name=".ui.gallery.masters.MastersActivity" />
 
 
+        <service android:name="ru.lotoos.saloon_lotoos.notification.NotificationHandler"
+            android:enabled="true"
+            android:exported="false"/>
     </application>
 
 </manifest>

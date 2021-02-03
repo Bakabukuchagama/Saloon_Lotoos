@@ -1,16 +1,25 @@
 package ru.lotoos.saloon_lotoos;
 
 
+import android.app.Notification;
+import android.app.NotificationChannel;
+import android.app.NotificationManager;
+import android.content.Intent;
+import android.os.Build;
 import android.os.Bundle;
 import android.view.MenuItem;
 import android.view.Menu;
 import com.google.android.material.navigation.NavigationView;
 import androidx.annotation.NonNull;
+import androidx.core.app.NotificationCompat;
+import androidx.core.app.NotificationManagerCompat;
 import androidx.core.view.GravityCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
+
+import ru.lotoos.saloon_lotoos.notification.NotificationHandler;
 import ru.lotoos.saloon_lotoos.ui.gallery.GalleryFragment;
 import ru.lotoos.saloon_lotoos.ui.home.HomeFragment;
 import ru.lotoos.saloon_lotoos.ui.phone.PhoneFragment;
@@ -19,6 +28,10 @@ import ru.lotoos.saloon_lotoos.ui.slideshow.SlideshowFragment;
 public class Navigation_menu extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
 
     private DrawerLayout drawer;
+    private int notifyId;
+
+
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -26,8 +39,27 @@ public class Navigation_menu extends AppCompatActivity implements NavigationView
         setContentView(R.layout.activity_navigation);
         drawer = findViewById(R.id.drawer_layout);
         NavigationView navigationView = findViewById(R.id.nav_view);
-        navigationView.setNavigationItemSelectedListener(this);
 
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
+            CharSequence name = getString(R.string.channel_name);
+            String description = getString(R.string.channel_description);
+            String idChannel = getString(R.string.channel_id);
+            int importance = NotificationManager.IMPORTANCE_DEFAULT;
+            NotificationChannel channel = new NotificationChannel(idChannel, name, importance);
+            channel.setDescription(description);
+            // Register the channel with the system; you can't change the importance
+            // or other notification behaviors after this
+            NotificationManager notificationManager = getSystemService(NotificationManager.class);
+            notificationManager.createNotificationChannel(channel);
+        }
+
+        notifyId = 0;
+        Intent notif = new Intent(this, NotificationHandler.class);
+        notif.putExtra("notId", notifyId);
+        startService(notif);
+
+
+        navigationView.setNavigationItemSelectedListener(this);
     }
 
     @Override
