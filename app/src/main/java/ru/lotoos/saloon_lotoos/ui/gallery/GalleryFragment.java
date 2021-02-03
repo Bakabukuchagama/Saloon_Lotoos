@@ -40,6 +40,7 @@ public class GalleryFragment extends Fragment {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 Intent intent = new Intent(GalleryFragment.this.getActivity(), MastersActivity.class);
+                intent.putExtra("master_id", position);
                 startActivity(intent);
             }
         });

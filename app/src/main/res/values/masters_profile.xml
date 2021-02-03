@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="masters_profile">
+        <item>Профиль для мастера Володя Карась</item>
+        <item>Профиль для мастера Арни Рама</item>
+        <item>Профиль для мастера Антон Гук</item>
+        <item>Профиль для мастера Вася Гвоздь</item>
+        <item>Профиль для мастера Федя Чегачу</item>
+        <item>Профиль для мастера Архип Модельер</item>
+        <item>Профиль для мастера Миха Киба</item>
+    </string-array>
+</resources>
