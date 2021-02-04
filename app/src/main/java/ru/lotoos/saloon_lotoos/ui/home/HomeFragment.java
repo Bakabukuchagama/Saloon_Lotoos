@@ -26,11 +26,11 @@ public class HomeFragment extends Fragment {
         homeViewModel =
                 new ViewModelProvider(this).get(HomeViewModel.class);
         View root = inflater.inflate(R.layout.fragment_home, container, false);
-        myWebView = (WebView)root.findViewById(R.id.webView);
-        WebSettings webSettings = myWebView.getSettings();
-        webSettings.setJavaScriptEnabled(true);
-        myWebView.setWebViewClient(new WebViewClient());
-        myWebView.loadUrl("http://www.lotoos.ru/");
+//        myWebView = (WebView)root.findViewById(R.id.webView);
+//        WebSettings webSettings = myWebView.getSettings();
+//        webSettings.setJavaScriptEnabled(true);
+//        myWebView.setWebViewClient(new WebViewClient());
+//        myWebView.loadUrl("http://www.lotoos.ru/");
 
         return root;
     }

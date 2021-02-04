@@ -8,7 +8,17 @@ import android.widget.TextView;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.android.volley.Request;
+import com.android.volley.RequestQueue;
+import com.android.volley.Response;
+import com.android.volley.VolleyError;
+import com.android.volley.toolbox.NetworkImageView;
+import com.android.volley.toolbox.StringRequest;
+
+import org.json.JSONObject;
+
 import ru.lotoos.saloon_lotoos.R;
+import ru.lotoos.saloon_lotoos.requestHandler.MySingleton;
 
 public class MastersActivity extends AppCompatActivity {
     private Intent intent;
@@ -30,6 +40,12 @@ public class MastersActivity extends AppCompatActivity {
         reciveIntent();
         textView.setText(masters_prof[masterId]);
         imageView.setImageResource(master_prof_pic[masterId]);
+
+
+        String url = "https://cdn.discordapp.com/attachments/399371944769748993/806955255371399228/image0.jpg";
+        NetworkImageView networkImageView = (NetworkImageView) findViewById(R.id.networkImageView);
+        networkImageView.setImageUrl(url, MySingleton.getInstance(this).getImageLoader());
+
 
     }
 
