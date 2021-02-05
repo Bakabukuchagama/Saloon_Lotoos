@@ -20,6 +20,12 @@
             android:id="@+id/phone"
             android:icon="@drawable/ic_baseline_phone_in_talk_24"
             android:title="@string/menu_phone" />
+
+        <item
+            android:id="@+id/vacancy"
+            android:icon="@drawable/ic_baseline_fingerprint_24"
+            android:title="@string/menu_vacancy" />
+
     </group>
 <group android:checkableBehavior="none">
     <item

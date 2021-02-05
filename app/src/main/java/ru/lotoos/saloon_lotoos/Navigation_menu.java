@@ -9,6 +9,8 @@ import android.os.Build;
 import android.os.Bundle;
 import android.view.MenuItem;
 import android.view.Menu;
+
+import com.android.volley.toolbox.NetworkImageView;
 import com.google.android.material.navigation.NavigationView;
 import androidx.annotation.NonNull;
 import androidx.core.app.NotificationCompat;
@@ -19,6 +21,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 
+import ru.lotoos.saloon_lotoos.dialog.CustomDialogFragment;
 import ru.lotoos.saloon_lotoos.notification.NotificationHandler;
 import ru.lotoos.saloon_lotoos.ui.gallery.GalleryFragment;
 import ru.lotoos.saloon_lotoos.ui.home.HomeFragment;
@@ -58,6 +61,7 @@ public class Navigation_menu extends AppCompatActivity implements NavigationView
         notif.putExtra("notId", notifyId);
         startService(notif);
 
+        Annonces();
 
         navigationView.setNavigationItemSelectedListener(this);
     }
@@ -118,5 +122,13 @@ public class Navigation_menu extends AppCompatActivity implements NavigationView
 
 
         return true;
+    }
+
+    private void Annonces(){
+        //NetworkImageView networkImageView = (NetworkImageView) findViewById(R.id.networkImageAnnonce);
+        CustomDialogFragment dialog = new CustomDialogFragment();
+        
+        dialog.show(getSupportFragmentManager(), "custom");
+
     }
 }

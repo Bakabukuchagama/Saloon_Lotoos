@@ -12,6 +12,7 @@
     <string name="menu_masters">Мастера</string>
     <string name="menu_request">Запись на приём</string>
     <string name="menu_phone">Номер телефона</string>
+    <string name="menu_vacancy">Ванкансии</string>
     <string name="menu_feedback">Обратная связь</string>
     <string name="not_yet">Данного описания пока нет, перезагрузите страницу.</string>
 
