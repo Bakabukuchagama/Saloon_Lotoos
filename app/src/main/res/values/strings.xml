@@ -16,8 +16,9 @@
     <string name="menu_feedback">Обратная связь</string>
     <string name="not_yet">Данного описания пока нет, перезагрузите страницу.</string>
 
-<string name="channel_name">Salon_Lotos</string>
-<string name="channel_description">channel for lotos</string>
-<string name="channel_id">LOTOSSALOON</string>
+    <string name="channel_name">Salon_Lotos</string>
+    <string name="channel_description">channel for lotos</string>
+    <string name="channel_id">LOTOSSALOON</string>
+
 
 </resources>

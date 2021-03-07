@@ -1,35 +1,37 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="ru.lotoos.saloon_lotoos" >
+    package="ru.lotoos.saloon_lotoos">
 
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.ACCESS_NOTIFICATION_POLICY" />
     <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
     <uses-permission android:name="android.permission.CALL_PHONE" />
+
     <application
-        android:usesCleartextTraffic="true"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher_1"
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_1_round"
         android:supportsRtl="true"
-        android:theme="@style/Theme.Saloon_Lotoos" >
+        android:theme="@style/Theme.Saloon_Lotoos"
+        android:usesCleartextTraffic="true">
+
         <activity
             android:name=".Navigation_menu"
             android:label="@string/title_activity_navigation"
-            android:theme="@style/Theme.Saloon_Lotoos.NoActionBar" >
-
+            android:theme="@style/Theme.Saloon_Lotoos.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
         <activity android:name=".ui.gallery.masters.MastersActivity" />
 
-
-        <service android:name="ru.lotoos.saloon_lotoos.notification.NotificationHandler"
+        <service
+            android:name=".notification.NotificationHandler"
             android:enabled="true"
-            android:exported="false"/>
+            android:exported="false" />
     </application>
 
 </manifest>

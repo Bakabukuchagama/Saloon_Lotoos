@@ -1,25 +1,22 @@
 package ru.lotoos.saloon_lotoos;
 
 
-import android.app.Notification;
 import android.app.NotificationChannel;
 import android.app.NotificationManager;
 import android.content.Intent;
 import android.os.Build;
 import android.os.Bundle;
-import android.view.MenuItem;
 import android.view.Menu;
+import android.view.MenuItem;
 
-import com.android.volley.toolbox.NetworkImageView;
-import com.google.android.material.navigation.NavigationView;
 import androidx.annotation.NonNull;
-import androidx.core.app.NotificationCompat;
-import androidx.core.app.NotificationManagerCompat;
+import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.view.GravityCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
-import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
+
+import com.google.android.material.navigation.NavigationView;
 
 import ru.lotoos.saloon_lotoos.dialog.CustomDialogFragment;
 import ru.lotoos.saloon_lotoos.notification.NotificationHandler;
@@ -32,9 +29,6 @@ public class Navigation_menu extends AppCompatActivity implements NavigationView
 
     private DrawerLayout drawer;
     private int notifyId;
-
-
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -72,6 +66,7 @@ public class Navigation_menu extends AppCompatActivity implements NavigationView
 
         return true;
     }
+
     @Override
     public void onBackPressed() {
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
@@ -89,18 +84,18 @@ public class Navigation_menu extends AppCompatActivity implements NavigationView
         Class fragmentClass = null;
         int id = item.getItemId();
 
-        if(id == R.id.nav_home){
+        if (id == R.id.nav_home) {
 
             fragmentClass = HomeFragment.class;
         }
-        if(id == R.id.nav_gallery){
+        if (id == R.id.nav_gallery) {
             fragmentClass = GalleryFragment.class;
 
         }
-        if(id == R.id.nav_slideshow){
+        if (id == R.id.nav_slideshow) {
             fragmentClass = SlideshowFragment.class;
         }
-        if(id == R.id.phone){
+        if (id == R.id.phone) {
             fragmentClass = PhoneFragment.class;
         }
 
@@ -124,10 +119,10 @@ public class Navigation_menu extends AppCompatActivity implements NavigationView
         return true;
     }
 
-    private void Annonces(){
+    private void Annonces() {
         //NetworkImageView networkImageView = (NetworkImageView) findViewById(R.id.networkImageAnnonce);
         CustomDialogFragment dialog = new CustomDialogFragment();
-        
+
         dialog.show(getSupportFragmentManager(), "custom");
 
     }
